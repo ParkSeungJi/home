@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.12.1.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>영신교회로 오세요~</title>
+    <style>
+
+        *{margin:0; padding:0;}
+    
+        body{font-family: sans-serif;}
+    
+        a{font-family: "맑은 고딕";text-decoration:none; color:black;}
+    
+    
+        ul, ol{list-style-type:none;}
+    
+        img, input{border:0;vertical-align:top;}
+    
+        #wrap, main{
+            position: relative;
+            width:100%;
+        }
+        #first{
+            display:block;
+            width:100%;
+            height:100%;
+        }
+        #first>img{
+            width:100%;
+            height:auto;
+        }
+        #second{
+            display: none;
+            width:100%;
+            height:100%;
+        }
+        #second>img{
+            width:100%;
+            height:auto;
+        }
+        </style>
+        
+</head>
+
+<body>
+    <div id="wrap">
+        
+        <main>
+            <div id="first"><img src="images/laden.jpg" alt=""></div>
+            <div id="second"><img src="images/laden2.jpg" alt=""></div>
+        </main>
+        
+    </div>
+</body>
+<script>
+        $("#first").click(function(){
+     var btn1 = $("#first").css("display");
+
+  if(btn1 == "block"){
+      $(this).css("display","none");
+      $("#second").css("display","block");
+      $("#second").fadeIn();
+      
+  }
+  return false;
+  });
+
+  $("#second").click(function(){
+     var btn2 = $("#second").css("display");
+
+  if(btn2 == "block"){
+      $(this).css("display","none");
+      $("#first").css("display","block");
+      $("#first").fadeIn();
+  }
+  return false;
+  });
+      </script>
+</html>

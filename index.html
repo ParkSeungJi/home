@@ -24,57 +24,101 @@
             width:100%;
         }
         #first{
+            position: relative;
             display:block;
             width:100%;
             height:100%;
+            background:#000;
         }
         #first>img{
             width:100%;
-            height:auto;
+            height:100%;
         }
         #second{
-            display: none;
+            position: absolute;
+            display:block;
             width:100%;
             height:100%;
+            top:0;
+            left:-100%;
+ 
         }
         #second>img{
             width:100%;
-            height:auto;
+            height:100%;
         }
+        #btn{
+            position: absolute;
+            font-family:  "나눔바른고딕";
+            font-size: 70px;
+            top:42%;
+            right:0;
+        }
+        #btn>a{
+            position: absolute;
+            font-family:  "나눔바른고딕";
+            font-size: 70px;
+            top:42%;
+            right:0;
+            color:#236ab1;
+        }
+        #btn2{
+            position: absolute;
+            font-family: "나눔바른고딕";
+            font-size: 70px;
+            top:42%;
+            left:0;
+
+        }
+        #btn2>a{
+            position: absolute;
+            font-family: "나눔바른고딕";
+            font-size: 70px;
+            top:42%;
+            left:0;
+            color:#236ab1;
+    
+        }
+        
         </style>
         
 </head>
 
 <body>
     
-       <main>
-        
-            <div id="first"><img src="images/laden.jpg" alt=""></div>
-            <div id="second"><img src="images/laden2.jpg" alt=""></div>
-        
-        </main> 
+        <main>
+        <div id="wrap">
+            <div id="first">
+                <img src="images/laden.jpg" alt="">
+                <div id="btn"><a href="#"> ></a></div>
+            </div>
+            <div id="second">
+                <img src="images/laden2.jpg" alt="">
+                <div id="btn2"><a href="#"> < </a></div>
+            </div>
+        </div>
+        </main>
     
 </body>
 <script>
-        $("#first").click(function(){
-     var btn1 = $("#first").css("display");
+        $("#btn").click(function(){
+     var btn1 = $("#btn").css("display");
 
   if(btn1 == "block"){
-      $(this).css("display","none");
+      $("#second").show(100).animate({left:"0"});
       $("#second").css("display","block");
-      $("#second").fadeIn();
-      
+      $("#first").animate({left:"-100%"});
   }
   return false;
   });
 
-  $("#second").click(function(){
-     var btn2 = $("#second").css("display");
+  $("#btn2").click(function(){
+     var btn2 = $("#btn2").css("display");
 
   if(btn2 == "block"){
-      $(this).css("display","none");
+      $("#second").animate({left:"-100%"});
       $("#first").css("display","block");
-      $("#first").fadeIn();
+      $("#first").show(100).animate({left:"0"});
   }
   return false;
   });

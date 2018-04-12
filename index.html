@@ -48,36 +48,56 @@
             height:100%;
         }
         #btn{
+            width:34px;
+            height:34px;
             position: absolute;
             font-family:  "나눔바른고딕";
             font-size: 70px;
             top:42%;
-            right:0;
+            right:5px;
         }
         #btn>a{
+            width:34px;
+            height:34px;
             position: absolute;
             font-family:  "나눔바른고딕";
             font-size: 70px;
             top:42%;
-            right:0;
-            color:#236ab1;
+            right:5px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px #666;
         }
+        #btn>a>img{
+            width:34px;
+            height:34px;
+        }
+
         #btn2{
+            width:34px;
+            height:34px;
             position: absolute;
             font-family: "나눔바른고딕";
             font-size: 70px;
             top:42%;
-            left:0;
+            left:5px;
 
         }
         #btn2>a{
+            width:34px;
+            height:34px;
             position: absolute;
             font-family: "나눔바른고딕";
             font-size: 70px;
             top:42%;
-            left:0;
-            color:#236ab1;
+            left:5px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px #666;
     
+        }
+        #btn2>a>img{
+            position: relative;
+            width:34px;
+            height:34px;
         }
         
         </style>
@@ -90,19 +110,19 @@
         <div id="wrap">
             <div id="first">
                 <img src="images/laden.jpg" alt="">
-                <div id="btn"><a href="#"> ></a></div>
+                <div id="btn"><a href="#"><img src="images/arrowright.png" alt=""></a></div>
             </div>
             <div id="second">
                 <img src="images/laden2.jpg" alt="">
-                <div id="btn2"><a href="#"> < </a></div>
+                <div id="btn2"><a href="#"><img src="images/arrowleft.png" alt=""></a></div>
             </div>
         </div>
         </main>
     
 </body>
 <script>
-        $("#btn").click(function(){
-     var btn1 = $("#btn").css("display");
+    $("#btn").click(function(){
+    var btn1 = $("#btn").css("display");
 
   if(btn1 == "block"){
       $("#second").show(100).animate({left:"0"});
